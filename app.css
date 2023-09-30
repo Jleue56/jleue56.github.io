@@ -100,7 +100,7 @@ h1 {
 .navbar .left p {
     font-weight: bold;
     font-size: 20px;
-    margin-left: 20px;
+    margin-left: 15px;
 }
 
 .navbar .right {
@@ -121,12 +121,13 @@ h1 {
     text-decoration: underline;
 }
 
-.picture {
+.logo {
     width: 40px;
     height: 40px;
-    border: 2px solid black;
-    border-radius: 50%;
+    /* border: 2px solid black; */
+    /* border-radius: 50%; */
     min-width: 40px;
+    min-height: 40px;
 }
 
 .navbar .hamburger {
