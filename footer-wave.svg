@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   id="visual"
+   viewBox="0 0 900 66.041573"
+   width="900"
+   height="66.041573"
+   version="1.1"
+   sodipodi:docname="wave-haikei (1).svg"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#999999"
+     borderopacity="1"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.78666667"
+     inkscape:cx="450.63559"
+     inkscape:cy="-85.805085"
+     inkscape:window-width="1472"
+     inkscape:window-height="876"
+     inkscape:window-x="20"
+     inkscape:window-y="58"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="visual" />
+  <path
+     d="m 0,15.04157 21.5,3.2 c 21.5,3.1 64.5,9.5 107.3,12.8 42.9,3.3 85.5,3.7 128.4,-2.3 42.8,-6 85.8,-18.4 128.6,-18.7 42.9,-0.2999999 85.5,11.3 128.4,15.2 42.8,3.8 85.8,-0.2 128.6,-6 42.9,-5.9 85.5,-13.4999999 128.4,-16.8999999 C 814,-0.95842991 857,0.04157009 878.5,0.54157009 L 900,1.0415701 V 66.04157 h -21.5 c -21.5,0 -64.5,0 -107.3,0 -42.9,0 -85.5,0 -128.4,0 -42.8,0 -85.8,0 -128.6,0 -42.9,0 -85.5,0 -128.4,0 -42.8,0 -85.8,0 -128.6,0 -42.9,0 -85.5,0 -128.4,0 -42.8,0 -85.8,0 -107.3,0 H 0 Z"
+     fill="#6e5ed5"
+     stroke-linecap="round"
+     stroke-linejoin="miter"
+     id="path1" />
+</svg>

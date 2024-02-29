@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "@grimille/duolingo-js": "^0.4.1",
+    "countup.js": "^2.8.0",
+    "duolingo-api-js": "^0.0.5",
+    "typeit": "^8.8.3"
+  }
+}
