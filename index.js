@@ -179,7 +179,7 @@ function toggleMobileNav() {
 }
 
 // Make a GET request to the endpoint
-fetch("http://jakeleueserver.xyz:420/steam")
+fetch("http://jakeleueserver.xyz/steam")
   .then((response) => {
     // Check if the request was successful (status code 200)
     if (!response.ok) {
