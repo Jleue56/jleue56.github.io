@@ -1,92 +1,93 @@
 article {
-  --img-scale: 1.003;
-  --title-color: #f5f5f5;
-  --link-icon-translate: -20px;
-  --link-icon-opacity: 0;
-  position: relative;
-  border-radius: 16px;
-  box-shadow: none;
-  transform-origin: center;
-  transition: all 0.4s ease-in-out;
-  overflow: hidden;
-  background: rgba(40, 40, 40, 0.7);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(3.2px);
-  -webkit-backdrop-filter: blur(3.2px);
-  border: 1px solid rgba(40, 40, 40, 0.15);
-  margin: 0 auto;
+    --img-scale: 1.003;
+    --title-color: #f5f5f5;
+    --link-icon-translate: -20px;
+    --link-icon-opacity: 0;
+    position: relative;
+    border-radius: 16px;
+    box-shadow: none;
+    transform-origin: center;
+    transition: all 0.4s ease-in-out;
+    overflow: hidden;
+    background: rgba(40, 40, 40, 0.7);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3.2px);
+    -webkit-backdrop-filter: blur(3.2px);
+    border: 1px solid rgba(40, 40, 40, 0.15);
+    margin: 0 auto;
+    max-width: 500px;
 }
 
 article a::after {
-  position: absolute;
-  inset-block: 0;
-  inset-inline: 0;
-  cursor: pointer;
-  content: "";
+    position: absolute;
+    inset-block: 0;
+    inset-inline: 0;
+    cursor: pointer;
+    content: "";
 }
 
 /* basic article elements styling */
 article h2 {
-  margin: 0 0 18px 0;
-  font-family: "Inter", cursive;
-  font-size: 1.9rem;
-  letter-spacing: 0.01em;
-  color: var(--title-color);
-  transition: color 0.3s ease-out;
+    margin: 0 0 18px 0;
+    font-family: "Inter", cursive;
+    font-size: 1.9rem;
+    letter-spacing: 0.01em;
+    color: var(--title-color);
+    transition: color 0.3s ease-out;
 }
 
 article p {
-  color: #f5f5f5;
+    color: #f5f5f5;
 }
 
 figure {
-  margin: 0;
-  padding: 0;
-  aspect-ratio: 16 / 9;
-  overflow: hidden;
+    margin: 0;
+    padding: 0;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
 }
 
 article img {
-  max-width: 100%;
-  transform-origin: center;
-  transform: scale(var(--img-scale));
-  transition: transform 0.4s ease-in-out;
-  object-fit: cover;
+    max-width: 100%;
+    transform-origin: center;
+    transform: scale(var(--img-scale));
+    transition: transform 0.4s ease-in-out;
+    object-fit: cover;
 }
 
 .article-body {
-  padding: 24px;
+    padding: 24px;
 }
 
 article a {
-  display: inline-flex;
-  align-items: center;
-  text-decoration: none;
-  color: #6e5ed5;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: #6e5ed5;
 }
 
 article a:focus {
-  outline: 1px dotted #28666e;
+    outline: 1px dotted #28666e;
 }
 
 article a .icon {
-  min-width: 24px;
-  width: 24px;
-  height: 24px;
-  margin-left: 5px;
-  transform: translateX(var(--link-icon-translate));
-  opacity: var(--link-icon-opacity);
-  transition: all 0.3s;
+    min-width: 24px;
+    width: 24px;
+    height: 24px;
+    margin-left: 5px;
+    transform: translateX(var(--link-icon-translate));
+    opacity: var(--link-icon-opacity);
+    transition: all 0.3s;
 }
 
 /* using the has() relational pseudo selector to update our custom properties */
 article:has(:hover, :focus) {
-  --img-scale: 1.1;
-  --title-color: #6e5ed5;
-  --link-icon-translate: 0;
-  --link-icon-opacity: 1;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    --img-scale: 1.1;
+    --title-color: #6e5ed5;
+    --link-icon-translate: 0;
+    --link-icon-opacity: 1;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
     rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
 
@@ -97,7 +98,7 @@ Generic layout (demo looks)
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 /* body {
@@ -111,59 +112,65 @@ Generic layout (demo looks)
 } */
 
 .articles {
-  display: grid;
-  max-width: 1600px;
-  margin-inline: auto;
-  padding-inline: 24px;
-  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
-  gap: 72px;
-  margin-bottom: 24px;
-  justify-content: center;
+    display: grid;
+    max-width: 1600px;
+    margin-inline: auto;
+    padding-inline: 24px;
+    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+    gap: 72px;
+    margin-bottom: 24px;
+    justify-content: center;
 }
 
 @media screen and (max-width: 960px) {
-  .articles {
-    gap: 48px;
-    /* padding: 0; */
-  }
-  article {
-    /* container: card/inline-size; */
-  }
-  .article-body p {
-    display: none;
-  }
+    .articles {
+        gap: 48px;
+        /* padding: 0; */
+    }
+
+    article {
+        /* container: card/inline-size; */
+    }
+
+    .article-body p {
+        display: none;
+    }
 }
 
 @container card (min-width: 300px) {
-  .articles {
-    gap: 20px;
-  }
-  .article-wrapper {
-    display: grid;
-    grid-template-columns: 100px 1fr;
-    gap: 16px;
-  }
-  .article-body {
-    padding-left: 0;
-  }
-  figure {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-  }
-  figure img {
-    height: 100%;
-    aspect-ratio: 1;
-    object-fit: cover;
-  }
+    .articles {
+        gap: 20px;
+    }
+
+    .article-wrapper {
+        display: grid;
+        grid-template-columns: 100px 1fr;
+        gap: 16px;
+    }
+
+    .article-body {
+        padding-left: 0;
+    }
+
+    figure {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    figure img {
+        height: 100%;
+        aspect-ratio: 1;
+        object-fit: cover;
+    }
 }
 
 .sr-only:not(:focus):not(:active) {
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
 }

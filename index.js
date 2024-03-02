@@ -59,6 +59,7 @@ const descriptions = [
     "Recent Graduate",
     "Fitness Fanatic",
     "Coffee Lover",
+    
 ];
 
 new TypeIt("#hero-header", {

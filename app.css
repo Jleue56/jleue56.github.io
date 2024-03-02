@@ -425,7 +425,7 @@ body {
 }
 
 #see-more-button {
-    display: none;
+    display: block;
     margin: 12px auto 0;
     background: transparent;
     border: none;
@@ -433,28 +433,34 @@ body {
     height: 32px;
     font-weight: bold;
     font-size: 20px;
+    border-bottom: 1px solid black;
+    transition: all 100ms ease-in;
+    color: black;
 }
 
 #see-more-button:hover {
     cursor: pointer;
+    border-bottom: 2px solid black;
+    /*transform: translateY(-3px);*/
+}
+
+#see-more-button:active {
+    transform: translateY(5px);
+}
+
+
+#additional-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+}
+
+#additional-content.expanded {
+    max-height: 1000px; /* Adjust as needed */
 }
 
 
 @media screen and (max-width: 1000px) {
-    #see-more-button {
-        display: block; /* Show the button on small screens */
-        /* Additional button styling here */
-    }
-
-    #additional-content {
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.5s ease-out;
-    }
-
-    #additional-content.expanded {
-        max-height: 1000px; /* Adjust as needed */
-    }
 
     .content-wrapper .news-card {
         display: none; /* Hide all items by default */
