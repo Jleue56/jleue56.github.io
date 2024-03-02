@@ -581,4 +581,8 @@ body {
         height: calc(100vh - 110px);
         min-height: 550px;
     }
+
+    .projects-section {
+        margin: 0 40px 0 40px;
+    }
 }
