@@ -59,7 +59,7 @@ const descriptions = [
     "Recent Graduate",
     "Fitness Fanatic",
     "Coffee Lover",
-    
+
 ];
 
 new TypeIt("#hero-header", {
@@ -249,4 +249,110 @@ fetch("https://jakeleueserver.xyz/steam")
     .catch((error) => {
         // Handle errors
         console.error("Error:", error.message);
+    });
+
+// window.onSpotifyIframeApiReady = (IFrameAPI) => {
+//     const element = document.getElementById('embed-iframe');
+//     const options = {
+//         width: '100%',
+//         height: '160',
+//         uri: 'spotify:episode:7makk4oTQel546B0PZlDM5'
+//     };
+//     const callback = (EmbedController) => {
+//         document.querySelectorAll('.episode').forEach(
+//             episode => {
+//                 episode.addEventListener('click', () => {
+//                     EmbedController.loadUri(episode.dataset.spotifyId)
+//                 });
+//             })
+//     };
+//     IFrameAPI.createController(element, options, callback);
+// };
+
+fetch("https://jakeleueserver.xyz/spotify")
+    .then(response => {
+        if (!response.ok) {
+            throw new Error("Failed to retrieve data.");
+        }
+        // Parse the JSON response
+        return response.json();
+    })
+    .then(jsonData => {
+        const topArtistsDiv = document.querySelector('.top-artists');
+        const playlistsDiv = document.querySelector('.playlists');
+        const spotifyDiv = document.querySelector('.spotify');
+
+        let spotifyHeader = document.createElement('h3')
+        spotifyHeader.innerHTML = "<i class=\"fa-brands fa-spotify\"></i> My current top artists";
+        spotifyDiv.insertBefore(spotifyHeader, spotifyDiv.firstChild);
+
+        // jsonData.forEach((artist, index) => {
+        let artist;
+        let song;
+        let firstSong = jsonData[0].songs[0].uri;
+        for (let i = 0; i < 5; i++) {
+            // Create artist button
+            artist = jsonData[i];
+            let artistDiv = document.createElement('div');
+            artistDiv.className = 'artist';
+            if (i === 0) {
+                artistDiv.classList.add('active');
+            }
+
+            artistDiv.innerHTML = `<img src="${artist.first_image}" alt="${artist.name}"><div class="artist-name">${artist.name}</div>`;
+            topArtistsDiv.appendChild(artistDiv);
+
+            // Create corresponding playlist
+            let playlistDiv = document.createElement('div');
+            playlistDiv.className = 'playlist';
+            if (i === 0) {
+                playlistDiv.classList.add('active');
+            }
+            // artist.songs.forEach(song => {
+            for (let j = 0; j < 5; j++) {
+                song = artist.songs[j];
+                let songButton = document.createElement('button');
+                songButton.className = 'song';
+                songButton.dataset.spotifyId = song.uri;
+                songButton.textContent = song.name;
+                if (i === 0 && j === 0) {
+                    songButton.classList.add('active');
+                }
+                // songButton.addEventListener();
+                playlistDiv.appendChild(songButton);
+            }
+            // );
+            playlistsDiv.appendChild(playlistDiv);
+
+            // Click event for artist
+            artistDiv.addEventListener('click', function () {
+                document.querySelectorAll('.artist').forEach(p => p.classList.remove('active'));
+                artistDiv.classList.add('active')
+                document.querySelectorAll('.playlist').forEach(p => p.classList.remove('active'));
+                playlistDiv.classList.add('active');
+            });
+        }
+        // );
+        window.onSpotifyIframeApiReady = (IFrameAPI) => {
+            const element = document.getElementById('embed-iframe');
+            const options = {
+                width: '100%',
+                height: '160',
+                uri: firstSong
+            };
+            const callback = (EmbedController) => {
+                document.querySelectorAll('.song').forEach(
+                    episode => {
+                        episode.addEventListener('click', () => {
+                            EmbedController.loadUri(episode.dataset.spotifyId);
+                            document.querySelectorAll('.song').forEach(p => p.classList.remove('active'));
+                            episode.classList.add('active');
+                        });
+                    })
+            };
+            IFrameAPI.createController(element, options, callback);
+        };
+    })
+    .catch(error => {
+        console.error("Error retrieving Spotify information:", error);
     });

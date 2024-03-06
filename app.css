@@ -418,10 +418,9 @@ body {
 }
 
 .steam h3 {
-    font-size: 28px;
-    margin: 0;
-    margin-bottom: 12px;
-    text-align: center;
+    font-size: 26px;
+    margin: 0 0 12px 0.5rem;
+    /*text-align: center;*/
 }
 
 #see-more-button {
@@ -502,10 +501,9 @@ body {
 
 @media screen and (max-width: 768px) {
 
-    .steam h3 {
-        font-size: 20px;
-    }
-
+    /*.steam h3 {*/
+    /*    font-size: 20px;*/
+    /*}*/
     .spotify-medium {
         display: none;
     }

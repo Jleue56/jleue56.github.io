@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="dialog.css"/>
     <link rel="stylesheet" href="hr.css"/>
     <link rel="stylesheet" href="steam-cards.css"/>
+    <link rel="stylesheet" href="spotify.css">
     <link rel="icon" type="image/svg+xml" href="logo.svg"/>
     <link rel="mask-icon" href="logo.svg" color="#ffffff"/>
     <link rel="apple-touch-icon" href="logo.png"/>
@@ -408,23 +409,35 @@
     </div>
 
     <div class="steam">
-        <h3><i class="fa-brands fa-steam"></i> What I've been playing <i class="fa-brands fa-spotify"></i></h3>
+        <h3><i class="fa-brands fa-steam"></i> What I've been playing</h3>
         <div class="content-wrapper"></div>
     </div>
 
-    <div class="spotify-large">
-        <img src="https://spotify-recently-played-readme.vercel.app/api?user=solid_cake&count=3&width=950"
-             alt="Spotify recently played"/>
-    </div>
+    <!--    <div class="spotify-large">-->
+    <!--        <img src="https://spotify-recently-played-readme.vercel.app/api?user=solid_cake&count=3&width=950"-->
+    <!--             alt="Spotify recently played"/>-->
+    <!--    </div>-->
 
-    <div class="spotify-medium">
-        <img src="https://spotify-recently-played-readme.vercel.app/api?user=solid_cake&count=3&width=600"
-             alt="Spotify recently played"/>
-    </div>
+    <!--    <div class="spotify-medium">-->
+    <!--        <img src="https://spotify-recently-played-readme.vercel.app/api?user=solid_cake&count=3&width=600"-->
+    <!--             alt="Spotify recently played"/>-->
+    <!--    </div>-->
 
-    <div class="spotify-small">
-        <img src="https://spotify-recently-played-readme.vercel.app/api?user=solid_cake&count=3&width=350"
-             alt="Spotify recently played"/>
+    <!--    <div class="spotify-small">-->
+    <!--        <img src="https://spotify-recently-played-readme.vercel.app/api?user=solid_cake&count=3&width=350"-->
+    <!--             alt="Spotify recently played"/>-->
+    <!--    </div>-->
+
+    <div class="spotify">
+
+        <div id="embed-iframe"></div>
+        <div class="top-artists">
+            <!-- Artists will be loaded here -->
+        </div>
+
+        <div class="playlists">
+            <!-- Playlists will be loaded here -->
+        </div>
     </div>
 
     <hr class="hr anim flipped"/>
@@ -519,6 +532,7 @@
     };
 </script>
 
+<script src="https://open.spotify.com/embed/iframe-api/v1" async></script>
 <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
 <script src="index.js"></script>
 <script
