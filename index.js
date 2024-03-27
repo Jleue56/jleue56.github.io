@@ -290,9 +290,14 @@ fetch("https://jakeleueserver.xyz/spotify")
         let artist;
         let song;
         let firstSong = jsonData[0].songs[0].uri;
-        for (let i = 0; i < 5; i++) {
+        let i = 0;
+        while (i < 5) {
+            // for (let i = 0; i < 5; i++) {
             // Create artist button
             artist = jsonData[i];
+            if (artist.name === "T-Pain") { // just a lil filter for the kids lol
+                continue;
+            }
             let artistDiv = document.createElement('div');
             artistDiv.className = 'artist';
             if (i === 0) {
@@ -331,6 +336,7 @@ fetch("https://jakeleueserver.xyz/spotify")
                 document.querySelectorAll('.playlist').forEach(p => p.classList.remove('active'));
                 playlistDiv.classList.add('active');
             });
+            i++;
         }
         // );
         window.onSpotifyIframeApiReady = (IFrameAPI) => {
