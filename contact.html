@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/59bee05129.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="contact.css" />
+  </head>
+  <body>
+    <div id="particleNetwork"></div>
+    <div class="card-container">
+      <div class="picture"></div>
+      <h1 class="name">Jake Leue</h1>
+      <h3 class="title">Software Engineer</h3>
+      <div class="socials">
+        <div class="social-first-column">
+          <p class="social">
+            <a
+              href="https://www.linkedin.com/in/jakeleue/"
+              target="_blank"
+              class="social"
+              ><i class="fa-brands fa-linkedin"></i>jakeleue</a
+            >
+          </p>
+          <p class="social">
+            <a href="https://github.com/Jleue56" target="_blank" class="social"
+              ><i class="fa-brands fa-square-github"></i>Jleue56</a
+            >
+          </p>
+        </div>
+        <div class="social-second-column">
+          <p class="social">
+            <a href="https://jakeleue.com/" target="_blank" class="social">
+              <i class="fa-solid fa-paperclip"></i>jakeleue.com</a
+            >
+          </p>
+          <p class="social">
+            <a
+              href="https://www.instagram.com/jake_leue/"
+              target="_blank"
+              class="social"
+            >
+              <i class="fa-brands fa-square-instagram"></i>
+              @jakeleue</a
+            >
+          </p>
+        </div>
+      </div>
+      <a class="save-contact" href="http://vcrd.co/jleue/7814/d"
+        >Save contact</a
+      >
+    </div>
+    <script src="particles.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", (event) => {
+        const opts = {
+          colors: [
+            "#f5e0dc",
+            "#f2cdcd",
+            "#f5c2e7",
+            "#cba6f7",
+            "#f38ba8",
+            "#eba0ac",
+            "#fab387",
+            "#f9e2af",
+            "#a6e3a1",
+            "#94e2d5",
+            "#89dceb",
+            "#74c7ec",
+            "#89b4fa",
+            "#b4befe",
+          ],
+          speed: 300,
+          windSpeed: [1, 1.5],
+          windFlicker: 0.01,
+          windDirection: [250, 290],
+          wander: 0.8,
+          flicker: 0,
+          density: 5,
+          range: 500,
+          sizeMin: 2,
+          sizeMax: 5,
+          frameSkip: 0,
+          edgeOnly: false,
+          edgeAndCentre: false,
+          debug: false,
+        };
+
+        const particleNetwork = new ParticleNetwork("particleNetwork", {
+          /* options here */
+          ...opts,
+        });
+        particleNetwork.start();
+      });
+    </script>
+  </body>
+</html>
