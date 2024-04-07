@@ -9,6 +9,11 @@
   transition: transform 0.2s;
 }
 
+.social i {
+  font-size: 24px;
+  margin-right: 2px;
+}
+
 .social:hover,
 .social:focus {
   color: #f38ba8;
